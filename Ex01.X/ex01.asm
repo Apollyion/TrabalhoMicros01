@@ -10,12 +10,12 @@
 
 UDATA
 	
-var1H res 1;Reserve 1 byte for the variable Delay1
-var1L res 1;Reserve 1 byte for the variable Delay2
-var2H res 1;Reserve 1 byte for the variable Delay1
-var2L res 1;Reserve 1 byte for the variable Delay2
-resH res 1;Reserve 1 byte for the variable Delay1
-resL res 1;Reserve 1 byte for the variable Delay2
+var1H res 1
+var1L res 1
+var2H res 1
+var2L res 1
+resH res 1
+resL res 1
 
 CODE
  
