@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=
+SOURCEFILES_QUOTED_IF_SPACED=ex02.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=
-POSSIBLE_DEPFILES=
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ex02.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/ex02.o.d
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES=${OBJECTDIR}/ex02.o
 
 # Source Files
-SOURCEFILES=
+SOURCEFILES=ex02.asm
 
 
 
@@ -95,7 +95,23 @@ MP_LINKER_DEBUG_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/ex02.o: ex02.asm  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ex02.o.d 
+	@${RM} ${OBJECTDIR}/ex02.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/ex02.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/ex02.lst\" -e\"${OBJECTDIR}/ex02.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/ex02.o\" \"ex02.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/ex02.o"
+	@${FIXDEPS} "${OBJECTDIR}/ex02.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	
 else
+${OBJECTDIR}/ex02.o: ex02.asm  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ex02.o.d 
+	@${RM} ${OBJECTDIR}/ex02.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/ex02.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/ex02.lst\" -e\"${OBJECTDIR}/ex02.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/ex02.o\" \"ex02.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/ex02.o"
+	@${FIXDEPS} "${OBJECTDIR}/ex02.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	
 endif
 
 # ------------------------------------------------------------------------------------
