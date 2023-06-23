@@ -36,13 +36,14 @@ Start:
     MOVWF result
     
     GOTO $
+    ; Fim do programa
     
 MOVE_4:
-    RRNCF msb; Rotaciona para a direita através do carry
+    RRNCF msb; Rotaciona para esquerda
     RRNCF msb; Rotaciona novamente
     RRNCF msb; Rotaciona novamente
     RRNCF msb; Rotaciona novamente
     RETURN
-    ; Fim do programa
+    
 
 end
