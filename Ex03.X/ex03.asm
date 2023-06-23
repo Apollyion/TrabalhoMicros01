@@ -17,7 +17,7 @@ UDATA
 CODE
 Start:
     ; Coloque aqui o código para atribuir o valor desejado à variável 'var'
-    MOVLW b'10101010'
+    MOVLW b'11111111'
     MOVWF var
     
     ; Extrair os 4 MSBs
@@ -37,7 +37,8 @@ Start:
     
     GOTO $
     ; Fim do programa
-    
+
+; Função para rotacionar o Vetor para que ele transforme os ultimos 4 bits nos primeiros
 MOVE_4:
     RRNCF msb; Rotaciona para esquerda
     RRNCF msb; Rotaciona novamente
